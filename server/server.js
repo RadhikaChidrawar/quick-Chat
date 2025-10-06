@@ -41,6 +41,9 @@ app.use(express.json({limit:'4mb'}));
 app.use(cors());
 
 // route setup
+// app.get("/", (req, res) => {
+//     res.send("Server is running. Use /api/status for API test.");
+// });
 app.use("/api/status",(req, res)=> res.send("server is running"))
 app.use("/api/auth",userRouter)
 app.use("/api/messages", messageRouter)
